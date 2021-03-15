@@ -81,7 +81,7 @@ const ContactForm =() => {
         dispatch({ type: 'error', payload: data.error });
       } else {
         
-    fetch('http://localhost:3000/api/product')
+    fetch('https://aswinitally.herokuapp.com/api/product')
       .then((resp) => resp.json())
       .then((data) =>  setRowData(data));
         dispatch({ type: 'success' });
@@ -166,7 +166,7 @@ const ContactForm =() => {
       params.api.paginationGoToPage(4);
     };
 
-    fetch('http://localhost:3000/api/product')
+    fetch('https://aswinitally.herokuapp.com/api/product')
       .then((resp) => resp.json())
       .then((data) => updateData(data));
   };
